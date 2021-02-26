@@ -1,0 +1,164 @@
+.skdslider {
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 560px !important;
+}
+
+.skdslider .slide {
+    display: none;
+}
+
+.skdslider .slide img {
+    width: 100%;
+    height: 560px;
+    border: 0;
+}
+
+.skdslider ul.slide-navs {
+    bottom: 57px;
+    left: 50%;
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-50%);
+}
+
+.skdslider ul.slide-navs li {
+    float: left;
+	height:8px;
+	width:8px;
+    background: #fff;
+    border-radius: 50%;
+	margin: 0 15px;
+	cursor:pointer;
+    position: relative;
+}
+
+.skdslider ul.slide-navs li::after{
+    content: '';
+    position: absolute;
+    border: 2px solid #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+    display: none;
+}
+
+.skdslider ul.slide-navs li.active::after {
+    display: block;
+}
+
+.skdslider .slide-desc {
+    background: rgba(0, 0, 0, 0.51);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+.skdslider .slide-desc > h2 {
+    font-family: var(--opensans);
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 220px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.skdslider .slide-desc > p {
+    font-family: var(--opensans);
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    margin-top: -6px;
+    padding-bottom: 250px;
+}
+
+.skdslider .slide-desc > p a.more {
+    color:#990000;
+	font-size:20px;
+	text-decoration:none;
+}
+
+.skdslider .slide-desc > p a.more:hover {
+    text-decoration: underline;
+}
+
+.skdslider a.prev {
+    background: url("../images/left.png") no-repeat scroll 0 0 transparent;
+    width: 43px;
+    height: 43px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    margin-top: -17px;
+}
+
+.skdslider a.next {
+    background: url("../images/right.png") no-repeat scroll 0 0 transparent;
+    width: 43px;
+    height: 43px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    margin-top: -17px;
+}
+
+.skdslider a.prev:hover {
+  
+}
+.skdslider a.next:hover {
+  
+}
+
+.skdslider a.play {
+    background: url("../images/play.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+}
+
+.skdslider a.pause {
+    background: url("../images/pause.png") no-repeat scroll center center transparent;
+    width: 35px;
+    height: 35px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    margin-top: -17px;
+}
+/*Some Responsive CSS */
+@media screen and (max-width:767px) {
+	.skdslider .slide-desc > h2 {
+		font-size: 20px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	
+	.skdslider .slide-desc > p {
+		font-size: 14px;
+		line-height: 15px;
+		margin-top: 5px;
+	}
+	.skdslider .slide-desc > p a.more {
+		font-size:14px;
+	}
+}
